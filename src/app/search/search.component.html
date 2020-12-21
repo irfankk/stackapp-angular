@@ -1,0 +1,33 @@
+<h2>Search</h2>
+
+<form >
+
+  <div class="container">
+
+    <input type="text" placeholder="search .." [(ngModel)]="search" name="search">
+        
+    <button type="submit" (click)="onClick()">search</button>
+    
+  </div>
+
+ 
+</form>
+<div class="contents">
+  {{ questionList.length }}
+  <table style="width:100%" *ngFor="let question of questionList">
+    <tr>
+      <th>Title</th>
+      <td>{{ question.title }}</td>
+    </tr>
+    <tr>
+      <th>Link</th>
+      <td>{{ question.link }}</td>
+    </tr>
+    <tr>
+      <th>Tags</th>
+      <td>{{ question.tags }}</td>
+    </tr>
+  </table>
+</div>
+
+

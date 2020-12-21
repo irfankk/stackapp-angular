@@ -2,8 +2,11 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { ApiService } from "src/app/service/api.service";
+
 export const environment = {
-  production: false
+  production: false,
+  ApiService: 'http://127.0.0.1:8000/'
 };
 
 /*
